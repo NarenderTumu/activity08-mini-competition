@@ -6,3 +6,28 @@ output: github_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+
+```{r,message=FALSE}
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(tidymodels))
+suppressPackageStartupMessages(library(GGally))
+suppressPackageStartupMessages(library(ggfortify))
+library(readr)
+library(skimr)
+library(broom)
+library(psych)
+suppressPackageStartupMessages(library(Hmisc))
+```
+
+```{r}
+inventory <- read_csv("inventory.csv",show_col_types = FALSE)
+
+```
+
+```{r}
+skimr::skim(inventory)
+hist.data.frame(inventory)
+ggpairs(inventory,cardinality_threshold = 500)
+```
+
