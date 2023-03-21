@@ -3,4 +3,5 @@
 .RData
 .Ruserdata
 README.Rmd
-.csv
+competition-files/data/inventory.csv
+competition-files/inventory.csv

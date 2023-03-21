@@ -28,6 +28,5 @@ inventory <- read_csv("inventory.csv",show_col_types = FALSE)
 ```{r}
 skimr::skim(inventory)
 hist.data.frame(inventory)
-ggpairs(inventory,cardinality_threshold = 500)
 ```
 
